@@ -36,11 +36,11 @@ function generatePassword() {
   
 }
 console.log("Here is your new password " + generatePassword());
-console.log(length);
-console.log(uppercase);
-console.log(lowercase);
-console.log(numbers);
-console.log(specialCharacters);
+//console.log(length);
+//console.log(uppercase);
+//console.log(lowercase);
+//console.log(numbers);
+//console.log(specialCharacters);
 
 function writePassword() {
   var password = generatePassword();
