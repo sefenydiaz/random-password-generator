@@ -30,12 +30,17 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   var characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*'
-  for (let i=0; i<128; i++) {
+  for (let i=0; i<=128; i++) {
   return [Math.floor(Math.random()) * characters.length];
   }
   
 }
 console.log("Here is your new password " + generatePassword());
+console.log(length);
+console.log(uppercase);
+console.log(lowercase);
+console.log(numbers);
+console.log(specialCharacters);
 
 function writePassword() {
   var password = generatePassword();
