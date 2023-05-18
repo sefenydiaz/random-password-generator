@@ -3,10 +3,11 @@
   // 
   // generate password variable 
   // 
-var answerTrue = " "  
+/*var answerTrue = " "  
 var generatePassword = {
   characters: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*'
 }
+//need a while loop for prompts !!
 var length = prompt("What is your desired password length? At least 8 characters but no longer than 128.");
 var uppercase = prompt("Do you want uppercase letters?");
 var lowercase = prompt("Do you want lowercase letters?");
@@ -52,3 +53,20 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+ ===============;
+var generateBtn = document.querySelector("#generate");
+function generatePassword() {
+*/
+var uppercase = /*add here*/ ;
+var lowercase = /*add here*/ ;
+var numbers = /*add here*/ ;
+var specialCharacters /*add here*/ ;
+
+
+var passwordLength = prompt("What is your desired password length? At least 8 characters but no longer than 128.")
+var confirmUppercase = confirm("Would you like to include lowercase characters?");
+var confirmLowercase = confirm("Would you like to include uppercase characters?");
+var confirmNumbers = confirm("Would you like to include numbers?");
+var confirmSpecialCharacters = confirm("Would you like to include special characters?");
+}
