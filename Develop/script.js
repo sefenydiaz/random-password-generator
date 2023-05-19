@@ -57,13 +57,18 @@ function writePassword() {
 var generateBtn = document.querySelector("#generate");
 function generatePassword() {
 
-var generatePassword = []
-var validCharacters = []
+var generatePassword = [];
+var validCharacters = [];
 //use .split method we learned in class !!!
 var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('') ;
 var lowercase = 'abcdefghijklmnopqrstuvwxyz'.split('') ;
 var numbers = '1234567890'.split('') ;
 var specialCharacters = '!@#$%^&*'.split('');
+// need arrays for .push
+var uppercaseArray = uppercase;
+var lowercaseArray = lowercase;
+var numbersArray = numbers;
+var specialCharactersArray = specialCharacters;
 
 // FUNCTIONS
   // write password prompt
@@ -74,13 +79,14 @@ var specialCharacters = '!@#$%^&*'.split('');
   //prompt: do you want special characters
   // generate random password
   //alert: here is your random password!
-var passwordLength = prompt("What is your desired password length? At least 8 characters but no longer than 128.")
-var confirmUppercase = confirm("Would you like to include lowercase characters?");
-var confirmLowercase = confirm("Would you like to include uppercase characters?");
-var confirmNumbers = confirm("Would you like to include numbers?");
-var confirmSpecialCharacters = confirm("Would you like to include special characters?");
+var passwordLength = prompt("What is your desired password length? At least 8 characters but no longer than 128.");
+var includeUppercase = confirm("Would you like to include lowercase characters?");
+var includeLowercase = confirm("Would you like to include uppercase characters?");
+var includeNumbers = confirm("Would you like to include numbers?");
+var includespecialCharacters = confirm("Would you like to include special characters?");
 
 console.log(passwordLength)
+
 
 //need if statement to keep password between 8-128 characters
 if (passwordLength < 8 || passwordLength > 128) {
@@ -89,19 +95,19 @@ if (passwordLength < 8 || passwordLength > 128) {
 
 //if statements for characters
 if (includeLowercase) [
-  validCharacters.push(lowercase)
+  validCharacters.push(...lowercaseArray) ;
 ]
 
 if (includeUppercase) [
-  validCharacters.push(uppercase)
+  validCharacters.push(...uppercaseArray) ;
 ]
 
 if (includeNumbers) [
-  validCharacters.push(numbers)
+  validCharacters.push(...numbersArray) ;
 ]
 
 if (includespecialCharacters) [
-  validCharacters.push(specialCharacters)
+  validCharacters.push(...specialCharactersArray) ;
 ]
 
 //the dreaded for loop...
