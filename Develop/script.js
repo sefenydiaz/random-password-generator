@@ -53,16 +53,17 @@ function writePassword() {
 */
 
 
- ===============;
+
 var generateBtn = document.querySelector("#generate");
 function generatePassword() {
 
 var generatePassword = []
+var validCharacters = []
 //use .split method we learned in class !!!
 var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('') ;
 var lowercase = 'abcdefghijklmnopqrstuvwxyz'.split('') ;
 var numbers = '1234567890'.split('') ;
-var specialCharacters '!@#$%^&*'.split('');
+var specialCharacters = '!@#$%^&*'.split('');
 
 // FUNCTIONS
   // write password prompt
@@ -86,6 +87,29 @@ if (passwordLength < 8 || passwordLength > 128) {
   passwordLength = prompt("You have entered an invalid password length. Please choose a number between 8 and 128.");
 }
 
+//if statements for characters
+if (includeLowercase) [
+  validCharacters.push(lowercase)
+]
+
+if (includeUppercase) [
+  validCharacters.push(uppercase)
+]
+
+if (includeNumbers) [
+  validCharacters.push(numbers)
+]
+
+if (includespecialCharacters) [
+  validCharacters.push(specialCharacters)
+]
+
+//the dreaded for loop...
+for(var i = 0; i < passwordLength; i++) {
+  generatePassword.push((validCharacters[Math.floor(Math.random() * validCharacters.length)]));
+}
+return(generatePassword.join(''));
+}
 
 // Write password to the #password input
 function writePassword() {
@@ -97,4 +121,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword); 
+generateBtn.addEventListener("click", writePassword) ;
