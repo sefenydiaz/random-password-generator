@@ -57,10 +57,12 @@ function writePassword() {
 var generateBtn = document.querySelector("#generate");
 function generatePassword() {
 
-var uppercase = /*add here*/ ;
-var lowercase = /*add here*/ ;
-var numbers = /*add here*/ ;
-var specialCharacters /*add here*/ ;
+var generatePassword = []
+//use .split method we learned in class !!!
+var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('') ;
+var lowercase = 'abcdefghijklmnopqrstuvwxyz'.split('') ;
+var numbers = '1234567890'.split('') ;
+var specialCharacters '!@#$%^&*'.split('');
 
 // FUNCTIONS
   // write password prompt
