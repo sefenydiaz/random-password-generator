@@ -50,23 +50,49 @@ function writePassword() {
   passwordText.value = password;
 
 }
+*/
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
 
  ===============;
 var generateBtn = document.querySelector("#generate");
 function generatePassword() {
-*/
+
 var uppercase = /*add here*/ ;
 var lowercase = /*add here*/ ;
 var numbers = /*add here*/ ;
 var specialCharacters /*add here*/ ;
 
-
+// FUNCTIONS
+  // write password prompt
+  //password can only be 8-128 characters
+  //prompt: do you want uppercase letters?
+  //prompt: do you want lowercase letters?
+  //prompt: do you want numbers?
+  //prompt: do you want special characters
+  // generate random password
+  //alert: here is your random password!
 var passwordLength = prompt("What is your desired password length? At least 8 characters but no longer than 128.")
 var confirmUppercase = confirm("Would you like to include lowercase characters?");
 var confirmLowercase = confirm("Would you like to include uppercase characters?");
 var confirmNumbers = confirm("Would you like to include numbers?");
 var confirmSpecialCharacters = confirm("Would you like to include special characters?");
+
+console.log(passwordLength)
+
+//need if statement to keep password between 8-128 characters
+if (passwordLength < 8 || passwordLength > 128) {
+  passwordLength = prompt("You have entered an invalid password length. Please choose a number between 8 and 128.");
 }
+
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword); 
