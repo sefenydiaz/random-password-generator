@@ -43,19 +43,19 @@ if (passwordLength < 8 || passwordLength > 128) {
 
 //if statements for characters
 if (includeLowercase) [
-  validCharacters.push(...lowercaseArray) ;
+  validCharacters.push(lowercaseArray) ;
 ]
 
 if (includeUppercase) [
-  validCharacters.push(...uppercaseArray) ;
+  validCharacters.push(uppercaseArray) ;
 ]
 
 if (includeNumbers) [
-  validCharacters.push(...numbersArray) ;
+  validCharacters.push(numbersArray) ;
 ]
 
 if (includespecialCharacters) [
-  validCharacters.push(...specialCharactersArray) ;
+  validCharacters.push(specialCharactersArray) ;
 ]
 
 //the dreaded for loop...
