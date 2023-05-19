@@ -1,56 +1,4 @@
-// Assignment code here
-// DATA 
-  // 
-  // generate password variable 
-  // 
-/*var answerTrue = " "  
-var generatePassword = {
-  characters: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*'
-}
-//need a while loop for prompts !!
-var length = prompt("What is your desired password length? At least 8 characters but no longer than 128.");
-var uppercase = prompt("Do you want uppercase letters?");
-var lowercase = prompt("Do you want lowercase letters?");
-var numbers = prompt("Do you want numbers?");
-var specialCharacters = prompt("Do you want special characters?");
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// FUNCTIONS
-  // write password prompt
-  //password can only be 8-128 characters
-  //prompt: do you want uppercase letters?
-  //prompt: do you want lowercase letters?
-  //prompt: do you want numbers?
-  //prompt: do you want special characters
-  // generate random password
-  //alert: here is your random password!
-
-// Write password to the #password input
-
-function generatePassword() {
-  var characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*'
-  for (let i=0; i<=128; i++) {
-  return [Math.floor(Math.random()) * characters.length];
-  }
-  
-}
-console.log("Here is your new password " + generatePassword());
-//console.log(length);
-//console.log(uppercase);
-//console.log(lowercase);
-//console.log(numbers);
-//console.log(specialCharacters);
-
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-*/
 
 
 
@@ -95,19 +43,19 @@ if (passwordLength < 8 || passwordLength > 128) {
 
 //if statements for characters
 if (includeLowercase) [
-  validCharacters.push(...lowercaseArray) ;
+  validCharacters.push(lowercaseArray) ;
 ]
 
 if (includeUppercase) [
-  validCharacters.push(...uppercaseArray) ;
+  validCharacters.push(uppercaseArray) ;
 ]
 
 if (includeNumbers) [
-  validCharacters.push(...numbersArray) ;
+  validCharacters.push(numbersArray) ;
 ]
 
 if (includespecialCharacters) [
-  validCharacters.push(...specialCharactersArray) ;
+  validCharacters.push(specialCharactersArray) ;
 ]
 
 //the dreaded for loop...
