@@ -31,3 +31,4 @@ THEN the password is either displayed in an alert or written to the page
 ![webpage screenshot](./images/Screenshot%202023-05-18%20at%208.35.19%20PM.png)
 
 ## Deployment Link
+https://sefenydiaz.github.io/random-password-generator/
